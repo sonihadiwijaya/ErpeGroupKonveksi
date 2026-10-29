@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ERPE Group Konveksi | Konveksi Profesional Indonesia</title>
+
+<meta name="description" content="ERPE Group Konveksi adalah konveksi profesional Indonesia yang melayani produksi apparel custom berkualitas premium.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+
+body{
+background:#050505;
+color:white;
+font-family:Inter,sans-serif;
+overflow-x:hidden;
+}
+
+/* HERO */
+.hero{
+background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTads4hqKMsP2Z2rWG10azWMCFjjCBy4EGRIktW66DeNZKVBLwqGL-mYhEk&s=10');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+position:relative;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+inset:0;
+background:linear-gradient(180deg,rgba(0,0,0,.75),rgba(0,0,0,.55),rgba(0,0,0,.85));
+}
+
+.glass{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.08);
+transition:.4s;
+}
+
+.glass:hover{
+transform:translateY(-5px);
+border:1px solid rgba(255,255,255,.2);
+}
+
+.gallery img{
+height:320px;
+width:100%;
+object-fit:cover;
+border-radius:20px;
+transition:.5s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+button,a{
+transition:.3s;
+}
+
+button:hover,a:hover{
+transform:scale(1.05);
+opacity:.9;
+}
+
+.wa{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px 22px;
+border-radius:999px;
+z-index:999;
+font-weight:bold;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.section-title{
+font-size:42px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="fixed top-0 w-full z-50 glass">
+<div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+
+<h1 class="font-bold text-xl tracking-widest">ERPE GROUP KONVEKSI</h1>
+
+<nav class="hidden md:flex gap-8 text-sm">
+<a href="#">Home</a>
+<a href="#about">Tentang</a>
+<a href="#services">Layanan</a>
+<a href="#gallery">Portfolio</a>
+<a href="#contact">Kontak</a>
+</nav>
+
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="relative z-10 max-w-4xl px-6">
+
+<h1 class="text-6xl md:text-7xl font-bold mb-6">
+Konveksi Profesional<br>Untuk Brand Indonesia
+</h1>
+
+<p class="text-gray-300 text-lg max-w-2xl mx-auto">
+Produksi kaos, hoodie, jaket, dan seragam custom berkualitas premium.
+</p>
+
+<div class="mt-10 flex justify-center gap-4 flex-wrap">
+
+<a href="#contact" class="bg-white text-black px-8 py-4 rounded-full font-semibold">
+Konsultasi Sekarang
+</a>
+
+<a href="#gallery" class="border border-white px-8 py-4 rounded-full">
+Lihat Portfolio
+</a>
+
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="py-28" id="about">
+<div class="max-w-6xl mx-auto px-6 text-center">
+
+<h2 class="section-title">Tentang Kami</h2>
+
+<p class="text-gray-400 max-w-4xl mx-auto leading-8">
+ERPE Group Konveksi adalah konveksi profesional yang fokus pada produksi apparel
+untuk brand, komunitas, sekolah, dan perusahaan dengan quality control ketat.
+</p>
+
+</div>
+</section>
+
+<!-- SERVICES -->
+<section class="py-24 bg-black" id="services">
+<div class="max-w-7xl mx-auto px-6">
+
+<h2 class="section-title text-center">Layanan Kami</h2>
+
+<div class="grid md:grid-cols-4 gap-6 mt-12">
+
+<div class="glass p-8 rounded-3xl">
+<h3 class="text-xl font-bold mb-3">Kaos</h3>
+<p class="text-gray-400">Cotton combed premium.</p>
+</div>
+
+<div class="glass p-8 rounded-3xl">
+<h3 class="text-xl font-bold mb-3">Hoodie</h3>
+<p class="text-gray-400">Fleece & baby terry.</p>
+</div>
+
+<div class="glass p-8 rounded-3xl">
+<h3 class="text-xl font-bold mb-3">Jaket</h3>
+<p class="text-gray-400">Varsity, bomber, outdoor.</p>
+</div>
+
+<div class="glass p-8 rounded-3xl">
+<h3 class="text-xl font-bold mb-3">Seragam</h3>
+<p class="text-gray-400">Instansi & komunitas.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- GALLERY (FIX 5 GAMBAR FULL) -->
+<section id="gallery" class="py-24">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<h2 class="section-title text-center">Portfolio</h2>
+
+<div class="gallery grid md:grid-cols-3 gap-6 mt-12">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTads4hqKMsP2Z2rWG10azWMCFjjCBy4EGRIktW66DeNZKVBLwqGL-mYhEk&s=10">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkP1xnsGhs1biiiY4aFWFDCfVOaaYaZ9Ni1deh_dowT42OCeLw1vUjdh4&s=10">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdGGYSw23M_0T_X36CQxetpNHucZCjvmKPOtMj-gYRcDrhpvaE5mhzSoDt&s=10">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVAl6uuIqLEkLYYORDhktZ-UOOMjYI6L7YMxt7Y6Ihq0bP-0QbjkzFKPIl&s=10">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ4hwtRUG_u85c98WjkDwbT-qVzuqPY7ZhwWRXHUeEZnzI9LRTjxKphr1K&s=10">
+
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 bg-black">
+
+<div class="max-w-2xl mx-auto px-6">
+
+<div class="glass p-10 rounded-3xl">
+
+<h2 class="text-4xl font-bold text-center mb-8">Ajukan Produksi</h2>
+
+<select id="type" class="w-full p-4 rounded-xl bg-black border border-gray-700 mb-4">
+<option value="">Pilih Produk</option>
+<option>Kaos</option>
+<option>Hoodie</option>
+<option>Jaket</option>
+<option>Seragam</option>
+</select>
+
+<select id="qty" class="w-full p-4 rounded-xl bg-black border border-gray-700 mb-4">
+<option value="">Jumlah</option>
+<option>24 pcs</option>
+<option>50 pcs</option>
+<option>100 pcs</option>
+<option>500 pcs+</option>
+</select>
+
+<select id="size" class="w-full p-4 rounded-xl bg-black border border-gray-700 mb-4">
+<option value="">Pilih Ukuran Utama</option>
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+<option>XXL / Custom</option>
+</select>
+
+<button onclick="generateWA()" class="w-full bg-white text-black font-bold py-4 rounded-xl">
+Kirim ke WhatsApp
+</button>
+
+</div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 text-center border-t border-gray-800">
+
+<h3 class="font-bold text-xl mb-2">ERPE GROUP KONVEKSI</h3>
+<p class="text-gray-500">Konveksi Profesional Indonesia</p>
+<p class="text-gray-500 mt-2">WhatsApp: +62 823-6349-1618</p>
+<p class="text-gray-600 mt-4">© 2026 ERPE Group Konveksi</p>
+
+</footer>
+
+<!-- FLOAT WA -->
+<a href="https://wa.me" class="wa">
+💬 Chat WhatsApp
+</a>
+
+<script>
+
+function generateWA(){
+
+let type = document.getElementById('type').value;
+let qty = document.getElementById('qty').value;
+let size = document.getElementById('size').value;
+
+if(type=='' || qty==''){
+alert('Lengkapi data terlebih dahulu');
+return;
+}
+
+let sizeText = size !== '' ? `Ukuran Utama: ${size}%0A` : '';
+
+let text =
+`Halo ERPE Group Konveksi 👋%0A%0A
+Saya ingin konsultasi produksi.%0A
+Produk: ${type}%0A
+Jumlah: ${qty}%0A
+${sizeText}%0A
+Mohon info:%0A
+- Estimasi harga%0A
+- Estimasi produksi%0A
+- Minimal order%0A%0A
+Terima kasih`;
+
+window.open('https://wa.me?text='+text,'_blank');
+}
+
+</script>
+
+</body>
+</html>
