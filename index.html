@@ -1,308 +1,471 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ERPE Group Konveksi | Konveksi Profesional Indonesia</title>
+  <title>ERPE Group Konveksi | Grosir & Seragam</title>
 
-<meta name="description" content="ERPE Group Konveksi adalah konveksi profesional Indonesia yang melayani produksi apparel custom berkualitas premium.">
+  <script src="https://cdn.tailwindcss.com"></script>
 
-<script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: #000;
+      font-family: sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
 
-<style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
 
-body{
-background:#050505;
-color:white;
-font-family:Inter,sans-serif;
-overflow-x:hidden;
-}
+    .hero {
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ4hwtRUG_u85c98WjkDwbT-qVzuqPY7ZhwWRXHUeEZnzI9LRTjxKphr1K&s=10");
+      background-size: cover;
+      background-position: center;
+    }
 
-/* HERO */
-.hero{
-background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTads4hqKMsP2Z2rWG10azWMCFjjCBy4EGRIktW66DeNZKVBLwqGL-mYhEk&s=10');
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
-position:relative;
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-}
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
 
-.hero::before{
-content:'';
-position:absolute;
-inset:0;
-background:linear-gradient(180deg,rgba(0,0,0,.75),rgba(0,0,0,.55),rgba(0,0,0,.85));
-}
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-.glass{
-background:rgba(255,255,255,.05);
-backdrop-filter:blur(20px);
-border:1px solid rgba(255,255,255,.08);
-transition:.4s;
-}
+    .hover-zoom {
+      overflow: hidden;
+      border-radius: 20px;
+    }
 
-.glass:hover{
-transform:translateY(-5px);
-border:1px solid rgba(255,255,255,.2);
-}
+    .hover-zoom img {
+      transition: transform 0.7s ease;
+    }
 
-.gallery img{
-height:320px;
-width:100%;
-object-fit:cover;
-border-radius:20px;
-transition:.5s;
-}
+    .hover-zoom:hover img {
+      transform: scale(1.1);
+    }
 
-.gallery img:hover{
-transform:scale(1.05);
-}
+    .wa-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 14px 22px;
+      border-radius: 50px;
+      font-size: 14px;
+      text-decoration: none;
+      z-index: 999;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
 
-button,a{
-transition:.3s;
-}
+    .gradient {
+      background: linear-gradient(to right, #d4a373, #e6ccb2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-button:hover,a:hover{
-transform:scale(1.05);
-opacity:.9;
-}
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
 
-.wa{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-padding:15px 22px;
-border-radius:999px;
-z-index:999;
-font-weight:bold;
-box-shadow:0 10px 30px rgba(0,0,0,.3);
-}
-
-.section-title{
-font-size:42px;
-font-weight:700;
-margin-bottom:20px;
-}
-
-</style>
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="fixed top-0 w-full z-50 glass">
-<div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 w-full z-50 glass px-6 py-4 flex justify-between items-center">
+    <h1 class="text-xl tracking-widest font-light">
+      ERPE GROUP KONVEKSI
+    </h1>
 
-<h1 class="font-bold text-xl tracking-widest">ERPE GROUP KONVEKSI</h1>
+    <nav class="hidden md:flex gap-6 text-sm text-gray-300">
+      <a href="#" class="hover:text-white">Home</a>
+      <a href="#about" class="hover:text-white">Tentang</a>
+      <a href="#gallery" class="hover:text-white">Galeri</a>
+      <a href="#order" class="hover:text-white">Order</a>
+    </nav>
+  </header>
 
-<nav class="hidden md:flex gap-8 text-sm">
-<a href="#">Home</a>
-<a href="#about">Tentang</a>
-<a href="#services">Layanan</a>
-<a href="#gallery">Portfolio</a>
-<a href="#contact">Kontak</a>
-</nav>
+  <!-- HERO -->
+  <section class="hero min-h-screen flex items-center justify-center text-center px-6">
+    <div class="max-w-3xl">
 
-</div>
-</header>
+      <h2 class="text-5xl md:text-7xl font-light leading-tight fade-up">
+        Grosir & Seragam
+        <span class="gradient">ERPE Group Konveksi</span>
+      </h2>
 
-<!-- HERO -->
-<section class="hero">
+      <p class="mt-6 text-gray-300 text-lg fade-up">
+        Melayani pembuatan kaos, kemeja, seragam sekolah,
+        seragam kantor, seragam kerja, komunitas, dan pesanan custom.
+      </p>
 
-<div class="relative z-10 max-w-4xl px-6">
+      <a
+        href="https://wa.me/6282363491618?text=Halo%20ERPE%20Group%20Konveksi%2C%20saya%20ingin%20konsultasi%20produk."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block mt-8 bg-white text-black px-8 py-4 rounded-full text-sm hover:bg-gray-200 transition"
+      >
+        Konsultasi via WhatsApp
+      </a>
 
-<h1 class="text-6xl md:text-7xl font-bold mb-6">
-Konveksi Profesional<br>Untuk Brand Indonesia
-</h1>
+    </div>
+  </section>
 
-<p class="text-gray-300 text-lg max-w-2xl mx-auto">
-Produksi kaos, hoodie, jaket, dan seragam custom berkualitas premium.
-</p>
+  <!-- ABOUT -->
+  <section id="about" class="py-24 px-6 max-w-5xl mx-auto text-center">
 
-<div class="mt-10 flex justify-center gap-4 flex-wrap">
+    <h2 class="text-4xl mb-8 fade-up">
+      Tentang ERPE Group Konveksi
+    </h2>
 
-<a href="#contact" class="bg-white text-black px-8 py-4 rounded-full font-semibold">
-Konsultasi Sekarang
-</a>
+    <p class="text-gray-400 leading-8 fade-up">
+      Assalamu'alaikum, selamat datang di ERPE Group Konveksi.
+      <br><br>
+      Kami melayani kebutuhan produksi pakaian dan seragam
+      untuk perorangan, perusahaan, sekolah, komunitas, maupun organisasi.
+      <br><br>
+      Tersedia layanan pembuatan kaos, kemeja, seragam sekolah,
+      seragam kantor, seragam kerja, serta desain khusus sesuai kebutuhan.
+      <br><br>
+      Hubungi kami melalui WhatsApp untuk konsultasi produk,
+      bahan, desain, harga, dan pemesanan.
+    </p>
 
-<a href="#gallery" class="border border-white px-8 py-4 rounded-full">
-Lihat Portfolio
-</a>
+    <a
+      href="https://wa.me/6282363491618?text=Halo%20ERPE%20Group%20Konveksi%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20konveksi."
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-block mt-8 bg-green-500 text-white px-8 py-4 rounded-full hover:bg-green-600 transition"
+    >
+      Hubungi Kami
+    </a>
 
-</div>
+  </section>
 
-</div>
-</section>
+  <!-- GALLERY -->
+  <section id="gallery" class="py-24 px-6 max-w-7xl mx-auto">
 
-<!-- ABOUT -->
-<section class="py-28" id="about">
-<div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-4xl text-center mb-14 fade-up">
+      Galeri Produk ERPE Group Konveksi
+    </h2>
 
-<h2 class="section-title">Tentang Kami</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-<p class="text-gray-400 max-w-4xl mx-auto leading-8">
-ERPE Group Konveksi adalah konveksi profesional yang fokus pada produksi apparel
-untuk brand, komunitas, sekolah, dan perusahaan dengan quality control ketat.
-</p>
+      <a
+        href="https://wa.me/6282363491618?text=Halo%20ERPE%20Group%20Konveksi%2C%20saya%20tertarik%20dengan%20produk%20pada%20galeri."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover-zoom fade-up block"
+      >
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ4hwtRUG_u85c98WjkDwbT-qVzuqPY7ZhwWRXHUeEZnzI9LRTjxKphr1K&s=10"
+          alt="Produk konveksi ERPE Group"
+          class="w-full h-[350px] object-cover"
+          loading="lazy"
+        >
+      </a>
 
-</div>
-</section>
+      <a
+        href="https://wa.me/6282363491618?text=Halo%20ERPE%20Group%20Konveksi%2C%20saya%20tertarik%20dengan%20produk%20pada%20galeri."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover-zoom fade-up block"
+      >
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8zVPt8LYXCyii0h_lUerrpwMmJw9Iu7_YacofO25etA&s"
+          alt="Koleksi pakaian konveksi"
+          class="w-full h-[350px] object-cover"
+          loading="lazy"
+        >
+      </a>
 
-<!-- SERVICES -->
-<section class="py-24 bg-black" id="services">
-<div class="max-w-7xl mx-auto px-6">
+      <a
+        href="https://wa.me/6282363491618?text=Halo%20ERPE%20Group%20Konveksi%2C%20saya%20tertarik%20dengan%20produk%20pada%20galeri."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover-zoom fade-up block"
+      >
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7u-n9Jpmgo1d2aqZ9uIhfg9HuqAMdVCBVcWQTLz515Q&s=10"
+          alt="Produk seragam ERPE Group"
+          class="w-full h-[350px] object-cover"
+          loading="lazy"
+        >
+      </a>
 
-<h2 class="section-title text-center">Layanan Kami</h2>
+      <a
+        href="https://wa.me/6282363491618?text=Halo%20ERPE%20Group%20Konveksi%2C%20saya%20tertarik%20dengan%20produk%20pada%20galeri."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover-zoom fade-up block"
+      >
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTddOnSiip_7hLXwSKt_pysRiG6B-19io3XKN71RID1ng&s=10"
+          alt="Koleksi produk konveksi"
+          class="w-full h-[350px] object-cover"
+          loading="lazy"
+        >
+      </a>
 
-<div class="grid md:grid-cols-4 gap-6 mt-12">
+    </div>
 
-<div class="glass p-8 rounded-3xl">
-<h3 class="text-xl font-bold mb-3">Kaos</h3>
-<p class="text-gray-400">Cotton combed premium.</p>
-</div>
+  </section>
 
-<div class="glass p-8 rounded-3xl">
-<h3 class="text-xl font-bold mb-3">Hoodie</h3>
-<p class="text-gray-400">Fleece & baby terry.</p>
-</div>
+  <!-- FEATURES -->
+  <section class="py-24 px-6 max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
 
-<div class="glass p-8 rounded-3xl">
-<h3 class="text-xl font-bold mb-3">Jaket</h3>
-<p class="text-gray-400">Varsity, bomber, outdoor.</p>
-</div>
+    <div class="glass p-8 rounded-2xl fade-up">
+      <h3 class="text-2xl mb-4">Produksi Berkualitas</h3>
+      <p class="text-gray-400">
+        Pembuatan pakaian dengan perhatian pada bahan,
+        jahitan, dan hasil akhir.
+      </p>
+    </div>
 
-<div class="glass p-8 rounded-3xl">
-<h3 class="text-xl font-bold mb-3">Seragam</h3>
-<p class="text-gray-400">Instansi & komunitas.</p>
-</div>
+    <div class="glass p-8 rounded-2xl fade-up">
+      <h3 class="text-2xl mb-4">Seragam Custom</h3>
+      <p class="text-gray-400">
+        Melayani pembuatan seragam sekolah, kantor,
+        kerja, komunitas, dan organisasi.
+      </p>
+    </div>
 
-</div>
+    <div class="glass p-8 rounded-2xl fade-up">
+      <h3 class="text-2xl mb-4">Desain Sesuai Kebutuhan</h3>
+      <p class="text-gray-400">
+        Konsultasikan model, warna, bahan, ukuran,
+        dan desain pakaian langsung dengan tim kami.
+      </p>
+    </div>
 
-</div>
-</section>
+  </section>
 
-<!-- GALLERY (FIX 5 GAMBAR FULL) -->
-<section id="gallery" class="py-24">
+  <!-- ORDER -->
+  <section id="order" class="py-24 px-6">
 
-<div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-2xl mx-auto glass p-10 rounded-3xl fade-up">
 
-<h2 class="section-title text-center">Portfolio</h2>
+      <h2 class="text-4xl text-center mb-8">
+        Konsultasi & Pemesanan
+      </h2>
 
-<div class="gallery grid md:grid-cols-3 gap-6 mt-12">
+      <p class="text-center text-gray-400 mb-8 leading-7">
+        Isi detail pesanan Anda. Tombol kirim akan membuka WhatsApp
+        ERPE Group Konveksi dengan pesan yang sudah disiapkan.
+      </p>
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTads4hqKMsP2Z2rWG10azWMCFjjCBy4EGRIktW66DeNZKVBLwqGL-mYhEk&s=10">
+      <form id="orderForm">
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkP1xnsGhs1biiiY4aFWFDCfVOaaYaZ9Ni1deh_dowT42OCeLw1vUjdh4&s=10">
+        <label for="nama" class="block mb-2 text-sm text-gray-300">
+          Nama Anda
+        </label>
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdGGYSw23M_0T_X36CQxetpNHucZCjvmKPOtMj-gYRcDrhpvaE5mhzSoDt&s=10">
+        <input
+          id="nama"
+          name="nama"
+          type="text"
+          placeholder="Masukkan nama Anda"
+          required
+          class="w-full p-4 bg-black border border-gray-700 rounded-xl mb-4 text-white"
+        >
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVAl6uuIqLEkLYYORDhktZ-UOOMjYI6L7YMxt7Y6Ihq0bP-0QbjkzFKPIl&s=10">
+        <label for="produk" class="block mb-2 text-sm text-gray-300">
+          Pilih Produk
+        </label>
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ4hwtRUG_u85c98WjkDwbT-qVzuqPY7ZhwWRXHUeEZnzI9LRTjxKphr1K&s=10">
+        <select
+          id="produk"
+          name="produk"
+          required
+          class="w-full p-4 bg-black border border-gray-700 rounded-xl mb-4 text-white"
+        >
+          <option value="">Pilih Produk</option>
+          <option value="Kaos">Kaos</option>
+          <option value="Kemeja">Kemeja</option>
+          <option value="Seragam Sekolah">Seragam Sekolah</option>
+          <option value="Seragam Kantor">Seragam Kantor</option>
+          <option value="Seragam Kerja">Seragam Kerja</option>
+          <option value="Seragam Komunitas">Seragam Komunitas</option>
+          <option value="Jaket">Jaket</option>
+          <option value="Produk Custom">Produk Custom</option>
+        </select>
 
-</div>
+        <label for="jumlah" class="block mb-2 text-sm text-gray-300">
+          Jumlah Order
+        </label>
 
-</div>
-</section>
+        <select
+          id="jumlah"
+          name="jumlah"
+          required
+          class="w-full p-4 bg-black border border-gray-700 rounded-xl mb-4 text-white"
+        >
+          <option value="">Pilih Jumlah Order</option>
+          <option value="1-12 pcs">1-12 pcs</option>
+          <option value="12-50 pcs">12-50 pcs</option>
+          <option value="50-100 pcs">50-100 pcs</option>
+          <option value="100+ pcs">100+ pcs</option>
+        </select>
 
-<!-- CONTACT -->
-<section id="contact" class="py-24 bg-black">
+        <label for="catatan" class="block mb-2 text-sm text-gray-300">
+          Detail atau Pertanyaan
+        </label>
 
-<div class="max-w-2xl mx-auto px-6">
+        <textarea
+          id="catatan"
+          name="catatan"
+          rows="4"
+          placeholder="Tuliskan ukuran, warna, bahan, desain, atau pertanyaan Anda"
+          class="w-full p-4 bg-black border border-gray-700 rounded-xl mb-4 text-white"
+        ></textarea>
 
-<div class="glass p-10 rounded-3xl">
+        <button
+          type="submit"
+          class="w-full bg-green-500 text-white py-4 rounded-xl font-semibold hover:bg-green-600 transition"
+        >
+          Kirim Pesan ke WhatsApp
+        </button>
 
-<h2 class="text-4xl font-bold text-center mb-8">Ajukan Produksi</h2>
+      </form>
 
-<select id="type" class="w-full p-4 rounded-xl bg-black border border-gray-700 mb-4">
-<option value="">Pilih Produk</option>
-<option>Kaos</option>
-<option>Hoodie</option>
-<option>Jaket</option>
-<option>Seragam</option>
-</select>
+    </div>
 
-<select id="qty" class="w-full p-4 rounded-xl bg-black border border-gray-700 mb-4">
-<option value="">Jumlah</option>
-<option>24 pcs</option>
-<option>50 pcs</option>
-<option>100 pcs</option>
-<option>500 pcs+</option>
-</select>
+  </section>
 
-<select id="size" class="w-full p-4 rounded-xl bg-black border border-gray-700 mb-4">
-<option value="">Pilih Ukuran Utama</option>
-<option>S</option>
-<option>M</option>
-<option>L</option>
-<option>XL</option>
-<option>XXL / Custom</option>
-</select>
+  <!-- CTA -->
+  <section class="py-24 text-center px-6">
 
-<button onclick="generateWA()" class="w-full bg-white text-black font-bold py-4 rounded-xl">
-Kirim ke WhatsApp
-</button>
+    <h2 class="text-4xl md:text-5xl fade-up">
+      Solusi Konveksi untuk Berbagai Kebutuhan
+    </h2>
 
-</div>
+    <p class="text-gray-400 mt-6 fade-up">
+      Siap memesan atau sekadar bertanya? Hubungi ERPE Group Konveksi.
+    </p>
 
-</div>
-</section>
+    <a
+      href="https://wa.me/6282363491618?text=Halo%20ERPE%20Group%20Konveksi%2C%20saya%20ingin%20konsultasi%20dan%20bertanya%20tentang%20layanan%20konveksi."
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-block mt-8 bg-green-500 text-white px-8 py-4 rounded-full hover:bg-green-600 transition"
+    >
+      Chat & Konsultasi Sekarang
+    </a>
 
-<!-- FOOTER -->
-<footer class="py-10 text-center border-t border-gray-800">
+  </section>
 
-<h3 class="font-bold text-xl mb-2">ERPE GROUP KONVEKSI</h3>
-<p class="text-gray-500">Konveksi Profesional Indonesia</p>
-<p class="text-gray-500 mt-2">WhatsApp: +62 823-6349-1618</p>
-<p class="text-gray-600 mt-4">© 2026 ERPE Group Konveksi</p>
+  <!-- FOOTER -->
+  <footer class="border-t border-gray-800 py-10 text-center text-gray-500 text-sm">
+    &copy; 2026 ERPE Group Konveksi — All Rights Reserved
+    <br><br>
+    WhatsApp:
+    <a
+      href="https://wa.me/6282363491618"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-green-400 hover:text-green-300"
+    >
+      082363491618
+    </a>
+  </footer>
 
-</footer>
+  <!-- FLOATING WHATSAPP -->
+  <a
+    href="https://wa.me/6282363491618?text=Halo%20ERPE%20Group%20Konveksi%2C%20saya%20ingin%20konsultasi."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="wa-float"
+    aria-label="Chat WhatsApp ERPE Group Konveksi"
+  >
+    Chat WhatsApp
+  </a>
 
-<!-- FLOAT WA -->
-<a href="https://wa.me" class="wa">
-💬 Chat WhatsApp
-</a>
+  <!-- JAVASCRIPT -->
+  <script>
+    const nomorWhatsApp = "6282363491618";
 
-<script>
+    document.getElementById("orderForm").addEventListener("submit", function (event) {
+      event.preventDefault();
 
-function generateWA(){
+      const nama = document.getElementById("nama").value.trim();
+      const produk = document.getElementById("produk").value;
+      const jumlah = document.getElementById("jumlah").value;
+      const catatan = document.getElementById("catatan").value.trim();
 
-let type = document.getElementById('type').value;
-let qty = document.getElementById('qty').value;
-let size = document.getElementById('size').value;
+      if (!nama || !produk || !jumlah) {
+        alert("Mohon lengkapi nama, produk, dan jumlah pesanan.");
+        return;
+      }
 
-if(type=='' || qty==''){
-alert('Lengkapi data terlebih dahulu');
-return;
-}
+      const pesan =
+`Halo ERPE Group Konveksi!
 
-let sizeText = size !== '' ? `Ukuran Utama: ${size}%0A` : '';
+Nama: ${nama}
+Produk: ${produk}
+Jumlah: ${jumlah}
+Detail/Pertanyaan: ${catatan || "-"}
 
-let text =
-`Halo ERPE Group Konveksi 👋%0A%0A
-Saya ingin konsultasi produksi.%0A
-Produk: ${type}%0A
-Jumlah: ${qty}%0A
-${sizeText}%0A
-Mohon info:%0A
-- Estimasi harga%0A
-- Estimasi produksi%0A
-- Minimal order%0A%0A
-Terima kasih`;
+Saya ingin konsultasi mengenai harga dan pemesanan.
+Terima kasih.`;
 
-window.open('https://wa.me?text='+text,'_blank');
-}
+      const urlWhatsApp =
+        "https://wa.me/" + nomorWhatsApp +
+        "?text=" + encodeURIComponent(pesan);
 
-</script>
+      // Buka percakapan WhatsApp dengan pesan yang sudah terisi.
+      window.open(urlWhatsApp, "_blank", "noopener,noreferrer");
+    });
+
+    // Animasi saat elemen terlihat di layar.
+    const items = document.querySelectorAll(".fade-up");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      items.forEach(function (item) {
+        observer.observe(item);
+      });
+    } else {
+      items.forEach(function (item) {
+        item.classList.add("show");
+      });
+    }
+  </script>
 
 </body>
 </html>
